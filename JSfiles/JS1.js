@@ -1,7 +1,13 @@
 /*ロード画面*/
+window.onload = function() {
+  const loader = document.getElementById('loading-wrapper');
+  loader.classList.add('completed');
+}
+
 setTimeout(function() {
-    $('#loading-wrapper').fadeOut(800);
-}, 3000); // 3秒後にfadeOut処理
+    $('#loading-wrapper').fadeOut(600);
+}, 300); // 5秒後にfadeOut処理
+
 
 /*ヘッダーjs*/
 function init() {
