@@ -1,7 +1,7 @@
 /*ロード画面*/
 setTimeout(function() {
     $('#loading-wrapper').fadeOut(800);
-}, 8000); // 5秒後にfadeOut処理
+}, 3000); // 3秒後にfadeOut処理
 
 /*ヘッダーjs*/
 function init() {
