@@ -6,7 +6,7 @@ window.onload = function() {
 
 setTimeout(function() {
     $('#loading-wrapper').fadeOut(600);
-}, 300); // 5秒後にfadeOut処理
+}, 5000); // 5秒後にfadeOut処理
 
 
 /*ヘッダーjs*/
