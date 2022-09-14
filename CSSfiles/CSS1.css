@@ -246,6 +246,7 @@ color:#white;
   color: #6AC1B7;
   font-size: 2.5vw;
 }
+
 .ICbox img{
   display: flex;
   padding: 20px;
@@ -308,3 +309,22 @@ color:#white;
   height: 200px;
   width: auto;
 }
+.btn {
+  font-size: 1.5vw;
+  border-radius: 20px;
+  background-color: #517D99;
+  padding: 0.4vw;
+  text-decoration: none;
+  color: white;
+  position: absolute;/*絶対位置*/
+  left: 7%;
+  bottom: 1vw;
+}
+.btn:hover{
+  color: white;
+  opacity: 0.5;
+}
+@media(max-width:750px){/*スマホでは非表示*/
+  .btn{
+    display: none !important;
+  }
