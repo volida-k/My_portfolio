@@ -1,4 +1,4 @@
-/*ロード画面*/
+/*ロード画面
 window.onload = function() {
   const loader = document.getElementById('loading-wrapper');
   loader.classList.add('completed');
@@ -6,7 +6,8 @@ window.onload = function() {
 
 setTimeout(function() {
     $('#loading-wrapper').fadeOut(600);
-}, 4000); // 5秒後にfadeOut処理
+}, 40); // 5秒後にfadeOut処理
+*/
 
 
 /*ヘッダーjs*/

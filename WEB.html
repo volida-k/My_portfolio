@@ -11,7 +11,8 @@
   <!--JQ読み込み-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-
+  <!--ScrollReveal読み込み-->
+  <script src="https://unpkg.com/scrollreveal"></script>
   <!--フォント-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,9 +162,24 @@
       <a href="https://www.instagram.com/kouki_03m/" target=”_blank”><img src="images/IC2.png" alt="画像" href="sample2.html"></a>
     </div>
   </section>
-</div>
 
+</div>
 </div><!-- ↑コンテンツ -->
+
+<script> //分けると反応しないjs
+  ScrollReveal().reveal('.INbox',{
+    delay: 300, // アニメーション開始までの時間
+    duration: 1000, // アニメーション完了にかかる時間
+    origin: 'left', // 要素がどの方向から来るか
+    distance: '50px', // 移動する距離
+    reset: true // フレームインの度に動かすか
+  });
+
+  window.onload = function() {
+    const loader = document.getElementById('loading-wrapper');
+    loader.classList.add('completed');
+  }
+</script>
 
 </body>
 </html>
