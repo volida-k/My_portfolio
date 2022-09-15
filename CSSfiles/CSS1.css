@@ -150,6 +150,7 @@ header{/*変化前のヘッダーのサイズやアニメーションの設定*/
   border-top-right-radius: 40px;/*右上丸*/
   border-bottom-right-radius: 40px;/*右下丸*/
 }
+
 .small{/*変化後のヘッダーのサイズ*/
   top: 0; /*上の余白*/
   padding: 0px;
@@ -176,6 +177,11 @@ text-decoration:none; /*アンダーラインを消す*/
 }
 a:active {
 color:#white;
+}
+@media(max-width:750px){/*スマホでは非表示*/
+  header{
+    display: none !important;
+  }
 }
 
 /* ホビーセクション */
@@ -213,6 +219,10 @@ color:#white;
 }
 
 /* スキルセクション */
+.IM{
+  width: 30%;
+  height:18%;
+}
 .HobbyBOX{
   padding-top: 0.5%;
   padding-bottom: 0.5%;
@@ -233,8 +243,13 @@ color:#white;
   display: flex;
   padding: 0px;
 }
+@media(max-width:750px){/*スマホでは非表示*/
+  .ICbox{
+    display: none !important;
+  }
+}
 .ICbox a{
-  padding: 10px;
+  padding: 0px;
   padding-left: 0px;
   text-decoration:none; /*アンダーラインを消す*/
 }
@@ -246,7 +261,6 @@ color:#white;
   color: #6AC1B7;
   font-size: 2.5vw;
 }
-
 .ICbox img{
   display: flex;
   padding: 20px;
@@ -257,9 +271,20 @@ color:#white;
   width: 2.5vw;
   height: 2.5vw;
 }
-.IM{
-  width: 30%;
-  height:18%;
+.ICbox2{
+  display: flex;
+  padding: 0px;
+}
+.ICbox2 img{
+  display: flex;
+  padding: 20px;
+  width: 4vw;
+  height: 4vw;
+}
+@media(min-width:750px){/*PCでは非表示*/
+  .ICbox2{
+    display: none !important;
+  }
 }
 
 /* ギャラリーセクション */
@@ -328,3 +353,4 @@ color:#white;
   .btn{
     display: none !important;
   }
+}
