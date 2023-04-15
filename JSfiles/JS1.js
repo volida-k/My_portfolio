@@ -27,18 +27,25 @@ window.onload = init();
 
 /*ギャラリー*/
 // 画像を読み込む
-const images = [];
-for (let i = 1; i <= 17; i++) {
-  const img = new Image();
-  img.src = `picture/a/a (${i}).jpg`;
-  img.onload = () => {
-    images.push(img);
-    // すべての画像を読み込んだら、グリッドに表示する
-    if (images.length === 17) {
-      const grid = document.querySelector(".image-grid");
-      images.forEach((image) => {
-        grid.appendChild(image);
-      });
-    }
-  };
+function loadImages(path, num, gridClass) {
+  const images = [];
+  for (let i = 1; i <= num; i++) {
+    const img = new Image();
+    img.src = `${path} (${i}).jpg`;
+    img.onload = () => {
+      images.push(img);
+      // すべての画像を読み込んだら、グリッドに表示する
+      if (images.length === num) {
+        const grid = document.querySelector(gridClass);
+        images.forEach((image) => {
+          grid.appendChild(image);
+        });
+      }
+    };
+  }
 }
+
+// 画像の読み込みとグリッドへの表示を行う
+loadImages("picture/a/a", 22, ".image-grid-a");
+loadImages("picture/b/b", 22, ".image-grid-b");
+loadImages("picture/c/c", 13, ".image-grid-c");
