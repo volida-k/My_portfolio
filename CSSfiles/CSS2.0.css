@@ -341,7 +341,7 @@ color:#white;
   padding: 0.4vw;
   text-decoration: none;
   color: white;
-  position: absolute;/*絶対位置*/
+  position: fixed; /* 絶対位置に固定 */
   left: 7%;
   bottom: 1vw;
 }
@@ -356,7 +356,7 @@ color:#white;
 }
 
 /*ギャラリーページCSS*/
-.image-grid {
+.image-grid-a,.image-grid-b,.image-grid-c {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -364,7 +364,8 @@ color:#white;
   margin: 0 auto;
   max-width: 80%;
 }
-.image-grid img {
+
+.image-grid-a img,.image-grid-b img,.image-grid-c img {
   margin: 10px;
   width: 200px;
   height: 200px;
@@ -373,6 +374,7 @@ color:#white;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
-.image-grid img:hover {
+
+.image-grid-a img:hover,.image-grid-b img:hover,.image-grid-c img:hover {
   transform: scale(1.1);
 }
