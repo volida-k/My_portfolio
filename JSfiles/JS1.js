@@ -1,11 +1,3 @@
-// 画像と動画の読み込みが完了したら、#loading-wrapperを非表示にする
-window.addEventListener('load', function() {
-    // #loading-wrapperを非表示にする
-    document.getElementById('loading-wrapper').style.display = 'none';
-});
-
-
-
 /*ヘッダーjs*/
 function init() {
     // 変化させる位置
