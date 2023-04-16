@@ -41,8 +41,22 @@ function loadImages(path, num, gridClass) {
     };
   }
 }
-
 // 画像の読み込みとグリッドへの表示を行う
 loadImages("picture/a/a", 22, ".image-grid-a");
 loadImages("picture/b/b", 22, ".image-grid-b");
 loadImages("picture/c/c", 13, ".image-grid-c");
+
+
+
+//プライベートページ
+function checkPassword() {
+  var password = document.getElementById("password-input").value;
+
+  if (password === "game-wasd") {
+    document.getElementById("wrong-password").innerHTML = "";
+    document.getElementById("password-input").value = "";
+    document.getElementById("content").style.display = "block";
+  } else {
+    document.getElementById("wrong-password").innerHTML = "パスワードが違います。";
+  }
+}
