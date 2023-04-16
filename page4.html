@@ -5,7 +5,7 @@
   <!-- ページの大きさ指定 -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- オリジナルCSSファイル -->
-  <link rel="stylesheet" href="CSSfiles/CSS1.css" type="text/css" media="all">
+  <link rel="stylesheet" href="CSSfiles/CSS2.0.css" type="text/css" media="all">
   <!-- オリジナルJSファイル -->
   <script type="text/javascript" src="JSfiles/JS1.js"></script>
   <!--ヘッダーJQ js-->
@@ -30,19 +30,32 @@
 </head>
 
 <body>
-<!-- 本文 -->
-<div class="H_main">
-  <h1>HOBBY GALLERY</h1>
-  <div class="H_IMbox">
-    <img src="https://drive.google.com/uc?id=15TGopw5q929JQ1K4m4bWBZCSjmyi6oqS">
-    <img src="https://drive.google.com/uc?id=15U-8hjurwsby-J1MyqjhjmMhJxmGqjMP">
-    <img src="https://drive.google.com/uc?id=15Y_I9Tq2bpcrNIjynhquiY4kd_lLFSRu">
-    <img src="https://drive.google.com/uc?id=1afEOVYaIYP7UccByqPsQEmFC1c_Xa3Dd">
-    <img src="https://drive.google.com/uc?id=16Rcz3RIap_y4d2QofHZya4uasGyRTY6K">
-    <img src="https://drive.google.com/uc?id=1uQE3iQbhheZgGt9Z3rhhskT9jesglgFE">
-  </div>
-  <a class="btn" href="https://volida-k.github.io/My_portfolio/WEB.html"><</a>
-</div>
+　<h1>ようこそ、プライベートページへ</h1>
 
+  <div class="container">
+    <p>パスワードを入力してください。※新規の方は本人までご連絡ください。</p>
+
+      <!-- パスワード入力画面-->
+    <div class="password-form">
+      <input type="password" id="password-input" placeholder="パスワードを入力してください">
+      <button id="submit-button" onclick="checkPassword()">確定</button>
+      <p id="wrong-password"></p>
+    </div>
+
+    <div id="content" style="display:none">
+    <!--鍵付きコンテンツ-->
+      <section id="P1">
+        <h1>なにを書こうかなー</h1>
+        <p>はじめまして!このページにアクセスしてくださり、ありがとうございます。<br>趣味でWEB関係のプログラミングを独学で学んでおり、まずは自己紹介サイトを作ってみました。</p>
+      </section>
+
+    </div>
+  </div>
+  <a class="btn" href="https://volida-k.github.io/My_portfolio/WEB.html"><</a>ｓ
+  <!--パスワード処理-->
+  <script type="text/javascript" src="JSfiles/JS1.js"></script>
 </body>
+
+
+
 </html>
