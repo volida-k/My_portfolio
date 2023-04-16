@@ -42,5 +42,19 @@
     <a class="btn" href="https://volida-k.github.io/My_portfolio/WEB.html"><</a>
   </div>
 
+  <script> //分けると反応しないjs
+    ScrollReveal().reveal('.INbox',{
+      delay: 0, // アニメーション開始までの時間
+      duration: 1000, // アニメーション完了にかかる時間
+      origin: 'left', // 要素がどの方向から来るか
+      distance: '50px', // 移動する距離
+      reset: true // フレームインの度に動かすか
+    });
+    window.onload = function() {
+      const loader = document.getElementById('loading-wrapper');
+      loader.classList.add('completed');
+    }
+  </script>
+
 </body>
 </html>
