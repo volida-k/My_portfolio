@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <!--
-ページをご覧いただきありがとうございます。
-まだまだスマートなコードではないと思いますが、一生懸命作りました。
+コードを見に来たんですね！ちょっと恥ずかしいです（笑）
+まだまだスマートなコードではないと思いますが、一生懸命作りました！
  -->
 
 <html lang="ja">
@@ -11,14 +11,13 @@
   <title>KOUKI'S PORTFOLIO</title>
   <!-- ページの大きさ指定 -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- オリジナルCSSファイル -->
+  <!-- CSSファイル -->
   <link rel="stylesheet" href="CSSfiles/CSS2.0.css" type="text/css" media="all">
-  <!-- オリジナルJSファイル -->
-  <script type="text/javascript" src="JSfiles/JS1.js"></script>
-  <!--JQ読み込み-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <!-- ScrollReveal読み込み -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- JSファイル -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>　<!--JQ-->
+  <script src="https://unpkg.com/scrollreveal"></script>  <!-- ScrollReveal -->
+  <script type="text/javascript" src="JSfiles/JS1.js"></script>　<!-- オリジナルJSファイル -->
+  <script type="text/javascript" src="JSfiles/JS0.js"></script>  <!-- オリジナルJSファイ(ロード画面) -->
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,11 +50,11 @@
 <div class="main">
 
   <header><!-- ナビゲーションバー -->
-      <li><a href="#">HOME</a></li>
-      <li><a href="#l1">ABOUT</a></li>
-      <li><a href="#l2">HOBBY</a></li>
-      <li><a href="#l3">SKILLS</a></li>
-      <li><a href="#l4">GALLERY</a></li>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#l1">ABOUT</a></li>
+    <li><a href="#l2">HOBBY</a></li>
+    <li><a href="#l3">SKILLS</a></li>
+    <li><a href="#l4">GALLERY</a></li>
   </header>
 
   <section id="l0">
@@ -64,8 +63,9 @@
 
   <section id="l1"><!-- アバウトセクション -->
     <h1>ABOUT</h1>
-    <p>はじめまして!このページにアクセスしてくださり、ありがとうございます。<br>趣味でWEB関係のプログラミングを独学で学んでおり、まずは自己紹介サイトを作ってみました。</p>
-    <p>このページでは僕の趣味やスキルを紹介していきます。<br>ご覧の通り、ものづくりや新しい物に興味があり、<br>ゆくゆくは最新技術を組み込んだページを追加していきたいと考えています。</p>
+    <p>はじめまして!ページにアクセスしてくださり、ありがとうございます。<br>趣味でプログラミングを学んでおり、まずは自己紹介サイトを作ってみました。</p>
+    <p>このページでは僕の趣味やスキルを紹介していきます。<br>ご覧の通り、ものづくりや新しい物に興味があります。</p>
+    <p>一応このページはPCでの閲覧を想定しています。<br>申し訳程度に見やすいように変形はしますが、スマホ版は気が向いたら作ります。</p>
   </section>
 
   <section id="l2"><!-- ホビーセクション -->
@@ -168,21 +168,6 @@
   </section>
 
 </div><!-- ↑コンテンツ -->
-
-<script> //分けると反応しないjs
-  ScrollReveal().reveal('.INbox',{
-    delay: 0, // アニメーション開始までの時間
-    duration: 1000, // アニメーション完了にかかる時間
-    origin: 'left', // 要素がどの方向から来るか
-    distance: '50px', // 移動する距離
-    reset: true // フレームインの度に動かすか
-  });
-
-  window.onload = function() {
-    const loader = document.getElementById('loading-wrapper');
-    loader.classList.add('completed');
-  }
-</script>
 
 </body>
 </html>
