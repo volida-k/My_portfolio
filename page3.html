@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- オリジナルCSSファイル -->
   <link rel="stylesheet" href="CSSfiles/CSS2.0.css" type="text/css" media="all">
-  <!-- オリジナルJSファイル -->
-  <script type="text/javascript" src="JSfiles/JS1.js"></script>
-  <!--ヘッダーJQ js-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- JSファイル -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>　<!--JQ-->
+  <script src="https://unpkg.com/scrollreveal"></script>  <!-- ScrollReveal -->
+  <script type="text/javascript" src="JSfiles/JS1.js"></script>　<!-- オリジナルJSファイル -->
+  <script type="text/javascript" src="JSfiles/JS0.js"></script>  <!-- オリジナルJSファイ(ロード画面) -->
   <!--フォント-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,26 +36,13 @@
     <div class="loader"></div>
     <p>Loading...</p>
   </div>
+
   <!-- 本文 -->
   <div class="H_main">
     <h1>HOBBY GALLERY</h1>
     <div class="image-grid-b"></div>
     <a class="btn" href="https://volida-k.github.io/My_portfolio/WEB.html"><</a>
   </div>
-
-  <script> //分けると反応しないjs
-    ScrollReveal().reveal('.INbox',{
-      delay: 0, // アニメーション開始までの時間
-      duration: 1000, // アニメーション完了にかかる時間
-      origin: 'left', // 要素がどの方向から来るか
-      distance: '50px', // 移動する距離
-      reset: true // フレームインの度に動かすか
-    });
-    window.onload = function() {
-      const loader = document.getElementById('loading-wrapper');
-      loader.classList.add('completed');
-    }
-  </script>
 
 </body>
 </html>
