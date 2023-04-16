@@ -8,15 +8,16 @@ html,body{
   width: 100%;
 }
 .main{
-  padding: 7%;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  position: relative;
+  z-index: 1;
+  margin: 0;
 }
 h1{
   color: #517D99;
-  font-size: 1.7vw;
-  margin-top: 2%;
-  margin-bottom: 0px;
+  font-size: 2vw;
+  display: block; /* ブロック要素に変更 */
+  text-align: center; /* 中央揃えに指定 */
+  width: 100%; /* 幅を指定 */
 }
 h2{
   margin: 0px;
@@ -26,10 +27,40 @@ h2{
   font-family: 'Kosugi Maru', sans-serif;
 }
 p{
-  font-size: 0.9vw;
+  font-size: 1vw;
   font-family: 'Kosugi Maru', sans-serif;
-  margin: 0px;
+  margin: 1.5%;
   line-height: 150%;
+}
+
+/*セクション毎背景*/
+#l0 {
+  text-align: center; /* 中央揃えに指定 */
+  padding: 4% 7%;
+  background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+}
+#l1 {
+  text-align: center; /* 中央揃えに指定 */
+  padding: 4% 7%;
+  background-color: #eff5fa;
+}
+#l2 {
+  padding: 4% 7%;
+  background-color: white;
+}
+#l3 {
+  padding: 4% 7%;
+  background-color: #f0f0f0;
+}
+#l4 {
+  text-align: center; /* 中央揃えに指定 */
+  padding: 4% 7%;
+  background-color: white;
+}
+#l5 {
+  text-align: center; /* 中央揃えに指定 */
+  padding: 4% 7%;
+  background-color: #eff5fa;
 }
 
 /* ロード画面 */
@@ -118,33 +149,42 @@ p{
   visibility: hidden;
 }
 
-/* ページトップ */
+/*背景*/
 .video-back {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
+
 .video-back video {
-  width: 100%;　/* ページ幅100% */
-  display: block;　/* 一般的な要素の表示形式 */
-  margin: 0;　/* 余白の設定 */
-}
-.TOPtext{
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   position: absolute;
-  margin: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20vw; /* ビューポートに合わせて変更 */
-  color: black;
-  letter-spacing: 1.5vw; /* 文字間隔 */
-  line-height: 100%; /* 行間 */
-  font-family: 'Staatliches', cursive;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
 }
 
 /*ヘッダー*/
 header{/*変化前のヘッダーのサイズやアニメーションの設定*/
   position: fixed;
-  top: 2.3vw; /*上の余白*/
-  background-color: #6AC1B7;
+  top: 1.5vw; /*上の余白*/
+  background-color: #517D99;
   transition: all 300ms 0s ease;
   z-index: 1;
   border-top-right-radius: 40px;/*右上丸*/
@@ -183,6 +223,18 @@ color:#white;
     display: none !important;
   }
 }
+
+/*タイトル文字*/
+.TOPtext{
+  margin: 0;
+  margin-top: 3%;
+  font-size: 20vw; /* ビューポートに合わせて変更 */
+  color: black;
+  letter-spacing: 1.5vw; /* 文字間隔 */
+  line-height: 100%; /* 行間 */
+  font-family: 'Staatliches', cursive;
+}
+
 
 /* ホビーセクション */
 .HobbyBOX{
@@ -226,8 +278,8 @@ color:#white;
 /* スキルセクション */
 .IMbox{
   display: flex; /*要素の並列化*/
-  padding-top: 1%;
-  padding-bottom: 1%;
+  justify-content: center; /* 中央揃え */
+  padding:1%;
   padding-left: 0px;
 }
 .IM{
@@ -236,23 +288,19 @@ color:#white;
 .INbox{
   display: flex;
   flex-flow: column; /*要素の縦列化*/
-  padding: 1.5%;
-  padding-left: 2%;
+  padding: 2%;
 }
 .ICbox{
   display: flex;
   padding: 0px;
 }
-@media(max-width:750px){/*スマホでは非表示*/
-  .ICbox{
-    display: none !important;
-  }
-}
+/*リンク*/
 .ICbox a{
   padding: 0.8vw;
   padding-left: 0px;
   text-decoration:none; /*アンダーラインを消す*/
 }
+/*アイコン*/
 .ICbox i{
   color: #517D99;
   font-size: 2.5vw;
@@ -271,30 +319,69 @@ color:#white;
   width: 2.5vw;
   height: 2.5vw;
 }
-.ICbox2{
+@media(max-width:750px){/*スマホでは非表示*/
+  .ICbox{
+    display: none !important;
+  }
+}
+/*スマホ用*/
+.ICboxS{
   display: flex;
   padding: 0px;
 }
-.ICbox2 img{
+.ICboxS img{
   display: flex;
   padding: 20px;
   width: 4vw;
   height: 4vw;
 }
 @media(min-width:750px){/*PCでは非表示*/
-  .ICbox2{
+  .ICboxS{
     display: none !important;
   }
 }
 
-/* ギャラリーセクション */
+/* コンタクト */
+.ICbox2{
+  display: flex;
+  justify-content: center; /* 中央揃え */
+}
+.ICbox2 img{
+  display: flex;
+  padding: 20px;
+  width: 1.8vw;
+  height: 1.8vw;
+}
+@media(max-width:750px){/*スマホでは非表示*/
+  .ICbox2{
+    display: none !important;
+  }
+}
+/*スマホ用*/
+.ICbox2S{
+  display: flex;
+  justify-content: center; /* 中央揃え */
+}
+.ICbox2S img{
+  display: flex;
+  padding: 20px;
+  width: 4vw;
+  height: 4vw;
+}
+@media(min-width:750px){/*PCでは非表示*/
+  .ICbox2S{
+    display: none !important;
+  }
+}
+
+
+/*ギャラリーページCSS*/
 .gallery {
   padding-right: 2%;
   width: 20%;
   height:11%;
 }
 
-/* 別ページ */
 .Pic-back {
   position: relative;
   background-color: black;
@@ -354,8 +441,7 @@ color:#white;
     display: none !important;
   }
 }
-
-/*ギャラリーページCSS*/
+/*画像の処理*/
 .image-grid-a,.image-grid-b,.image-grid-c {
   display: flex;
   flex-wrap: wrap;

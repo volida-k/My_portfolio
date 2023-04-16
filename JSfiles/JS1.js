@@ -1,11 +1,8 @@
-/*ロード画面*/
-/*window.onload = function() {
-  const loader = document.getElementById('loading-wrapper');
-  loader.classList.add('completed');
-}*/
-setTimeout(function() {
-    $('#loading-wrapper').fadeOut(600);
-}, 10000); // 5秒後にfadeOut処理
+// 画像と動画の読み込みが完了したら、#loading-wrapperを非表示にする
+window.addEventListener('load', function() {
+    // #loading-wrapperを非表示にする
+    document.getElementById('loading-wrapper').style.display = 'none';
+});
 
 
 

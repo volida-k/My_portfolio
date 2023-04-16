@@ -41,32 +41,31 @@
     <p>Loading...</p>
   </div>
 
-  <!-- コンテンツ本体 -->
-  <div id="page">
-
-    <!-- ページトップ -->
-    <div class="video-back">
-      <!-- ナビゲーションバー -->
-      <header>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#l1">ABOUT</a></li>
-        <li><a href="#l2">HOBBY</a></li>
-        <li><a href="#l3">SKILLS</a></li>
-        <li><a href="#l4">GALLERY</a></li>
-      </header>
-      <!-- 背景動画 -->
-      <video src="images/video1.mp4" alt="動画" autoplay loop muted></video>
-      <!-- タイトルテキスト -->
-      <p class="TOPtext">kouki's<br>portfolio</p>
-    </div>
-
+  <!-- 背景動画 -->
+  <div class="video-back">
+    <video src="images/video1.mp4" alt="動画" autoplay loop muted></video>
+    <div class="overlay"></div>
   </div>
 
-<!-- 本文 -->
+<!-- メインコンテンツ -->
 <div class="main">
-  <section id="l1"><!-- アバウトクション -->
+
+  <header><!-- ナビゲーションバー -->
+      <li><a href="#">HOME</a></li>
+      <li><a href="#l1">ABOUT</a></li>
+      <li><a href="#l2">HOBBY</a></li>
+      <li><a href="#l3">SKILLS</a></li>
+      <li><a href="#l4">GALLERY</a></li>
+  </header>
+
+  <section id="l0">
+    <p class="TOPtext">kouki's<br>portfolio</p><!-- タイトルテキスト -->
+  </section>
+
+  <section id="l1"><!-- アバウトセクション -->
     <h1>ABOUT</h1>
-    <p>はじめまして、コウキです。自己紹介サイトを作ってみました。<br>新しい事や創作活動が好きです。</p>
+    <p>はじめまして!このページにアクセスしてくださり、ありがとうございます。<br>趣味でWEB関係のプログラミングを独学で学んでおり、まずは自己紹介サイトを作ってみました。</p>
+    <p>このページでは僕の趣味やスキルを紹介していきます。<br>ご覧の通り、ものづくりや新しい物に興味があり、<br>ゆくゆくは最新技術を組み込んだページを追加していきたいと考えています。</p>
   </section>
 
   <section id="l2"><!-- ホビーセクション -->
@@ -78,9 +77,9 @@
       <div class="linkBOX"><a href="page5.html"><img src="images/pic (5).png" alt="画像"></a><p>DIY</p></div>
     </div>
     <div class="IMlink">
-      <div class="linkBOX"><a href="page7.html"><img src="images/pic (2).png" alt="画像"></a><p>ANIME</p></div>
+      <div class="linkBOX"><a href="page7.html"><img src="images/pic (2).png" alt="画像"></a><p>coming soon</p></div>
       <div class="linkBOX"><a href="page0.html"><img src="images/pic (4).png" alt="画像"></a><p>coming soon</p></div>
-      <div class="linkBOX"><a href="page0.html"><img src="images/pic (6).png" alt="画像"></a><p>coming soon</p></div>
+      <div class="linkBOX"><a href="page4.html"><img src="images/pic (6).png" alt="画像"></a><p>PRIVATE</p></div>
     </div>
   </div>
   </section>
@@ -155,20 +154,19 @@
     </div>
   </section>
 
-  <section id="l1"><!-- SNS -->
+  <section id="l5"><!-- SNS -->
     <h1>CONTACT</h1>
-    <p>SNSもたまに投稿しています。よければフォローお願いします。</p>
-    <div class="ICbox">
+    <p>SNSもたまに投稿しています。Twitterでは興味のある技術関係の事など、<br>Instagramでは旅行やご飯の写真を投稿しています。よければフォローお願いします。</p>
+    <div class="ICbox2">
       <a href="https://twitter.com/KoukiMasuda8" target=”_blank”><img src="images/IC1.png" alt="画像"></a>
       <a href="https://www.instagram.com/kouki_03m/" target=”_blank”><img src="images/IC2.png" alt="画像" href="sample2.html"></a>
     </div>
-    <div class="ICbox2"><!-- スマホ用 -->
+    <div class="ICbox2S"><!-- スマホ用 -->
       <a href="https://twitter.com/KoukiMasuda8" target=”_blank”><img src="images/IC1.png" alt="画像"></a>
       <a href="https://www.instagram.com/kouki_03m/" target=”_blank”><img src="images/IC2.png" alt="画像" href="sample2.html"></a>
     </div>
   </section>
 
-</div>
 </div><!-- ↑コンテンツ -->
 
 <script> //分けると反応しないjs
