@@ -12,8 +12,9 @@
   <!-- ページの大きさ指定 -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- CSSファイル -->
-  <link rel="stylesheet" href="CSSfiles/CSS_mobile.css" type="text/css" media="screen and (max-width: 750px)" >  <!-- スマホ用CSS-->
-  <link rel="stylesheet" href="CSSfiles/CSS2.0.css" type="text/css" media="screen and (min-width: 750px)">　<!-- 通常CSS-->
+  <link rel="stylesheet" href="CSSfiles/CSS2.0.css">　<!-- 共通CSS-->
+  <link rel="stylesheet" href="CSSfiles/PC.css" media="screen and (min-width: 751px)">　<!-- PC用CSS-->
+  <link rel="stylesheet" href="CSSfiles/Mobile.css" media="screen and (max-width: 750px)" >  <!-- スマホ用CSS-->
   <!-- JSファイル -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>　<!--JQ-->
   <script src="https://unpkg.com/scrollreveal"></script>  <!-- ScrollReveal -->
@@ -64,31 +65,25 @@
 
   <section id="l1"><!-- アバウトセクション -->
     <h1>ABOUT</h1>
-    <p>はじめまして!ページにアクセスしてくださり、ありがとうございます。<br>趣味でプログラミングを学んでおり、まずは自己紹介サイトを作ってみました。</p>
-    <p>このページでは僕の趣味やスキルを紹介していきます。<br>ご覧の通り、ものづくりや新しい物に興味があります。</p>
-    <p>一応このページはPCでの閲覧を想定しています。<br>申し訳程度に見やすいように変形はしますが、スマホ版は気が向いたら作ります。</p>
+    <p class="txtBOX">はじめまして!ページにアクセスしてくださり、ありがとうございます。<br>暇つぶしで自己紹介サイトを作ってみました。このページでは僕の趣味やスキルを紹介していきます。ご覧の通り、ものづくりや新しい物に興味があります。<br>※このページはPCでの閲覧を想定しています。スマホ版では要素を簡略化して見やすくしています。</p>
   </section>
 
   <section id="l2"><!-- ホビーセクション -->
     <h1>HOBBY</h1>
-  <div class="HobbyBOX">
-    <div class="IMlink">
-      <div class="linkBOX"><a href="page3.html"><img src="images/pic (3).png" alt="画像"></a><p>TRAVEL</p></div>
-      <div class="linkBOX"><a href="page1.html"><img src="images/pic (1).png" alt="画像"></a><p>CAMP</p></div>
-      <div class="linkBOX"><a href="page5.html"><img src="images/pic (5).png" alt="画像"></a><p>DIY</p></div>
+    <div class="flexBOX">
+      <div class="txtLink"><a href="page3.html"><img src="images/pic (3).png" alt="画像"></a><p>TRAVEL</p></div>
+      <div class="txtLink"><a href="page1.html"><img src="images/pic (1).png" alt="画像"></a><p>CAMP</p></div>
+      <div class="txtLink"><a href="page5.html"><img src="images/pic (5).png" alt="画像"></a><p>DIY</p></div>
+      <div class="txtLink"><a href="page7.html"><img src="images/pic (2).png" alt="画像"></a><p>coming soon</p></div>
+      <div class="txtLink"><a href="page0.html"><img src="images/pic (4).png" alt="画像"></a><p>coming soon</p></div>
+      <div class="txtLink"><a href="page4.html"><img src="images/pic (6).png" alt="画像"></a><p>PRIVATE</p></div>
     </div>
-    <div class="IMlink">
-      <div class="linkBOX"><a href="page7.html"><img src="images/pic (2).png" alt="画像"></a><p>coming soon</p></div>
-      <div class="linkBOX"><a href="page0.html"><img src="images/pic (4).png" alt="画像"></a><p>coming soon</p></div>
-      <div class="linkBOX"><a href="page4.html"><img src="images/pic (6).png" alt="画像"></a><p>PRIVATE</p></div>
-    </div>
-  </div>
   </section>
 
   <section id="l3"><!-- スキルセクション -->
     <h1>SKILLS</h1>
   <div class="IMbox">
-    <img src="images/pic (7).png" alt="画像" class="IM">
+    <img src="images/pic (7).png">
     <div class="INbox">
       <h2>プログラミング</h2>
       <p>高校時代にC言語を学び、大学ではC++やPythonを使ってロボットの制御などを行ってきました。研究内容はAIの画像変換モデルの生成で、プログラミングの基礎的な知識は持っていますが、まだまだ向上する余地があります。</p>
@@ -102,35 +97,35 @@
     </div>
   </div>
   <div class="IMbox">
-    <img src="images/pic (8).png" alt="画像" class="IM">
+    <img src="images/pic (8).png">
     <div class="INbox">
       <h2>デザイン</h2>
       <p>高校時代には美術部に所属し、グラフィックデザイン検定を取得した実績があります。大学時代には個人での創作活動で、オリジナルTシャツの販売やサムネイル制作の仕事をし、経験を積んできました。</p>
     </div>
   </div>
   <div class="IMbox">
-    <img src="images/pic (9).png" alt="画像" class="IM">
+    <img src="images/pic (9).png">
     <div class="INbox">
       <h2>ゲーム制作</h2>
       <p>UE4を使用して、簡単な3Dゲームを制作した経験があります。また、個人事業主としてゲーム内コンテンツの制作業務や、その経験を活かして専門学校で講師をした経験があります。</p>
     </div>
   </div>
   <div class="IMbox">
-    <img src="images/pic (10).png" alt="画像" class="IM">
+    <img src="images/pic (10).png">
     <div class="INbox">
       <h2>設計・機械加工</h2>
       <p>CADを使ったロボットの機構設計や、blenderを使用しての3Dオブジェクトの制作経験があります。ロボット制作やDIYを通じて基礎的な機械加工の技術も身につけました。</p>
     </div>
   </div>
   <div class="IMbox">
-    <img src="images/pic (11).png" alt="画像" class="IM">
+    <img src="images/pic (11).png">
     <div class="INbox">
       <h2>動画編集</h2>
       <p>基礎的な編集作業に加え、デザインセンスや最新技術を活かした高度な編集が得意です。大学時代には自身のYouTubeチャンネルで総再生回数100万回を達成するなど、その実力を発揮してきました。</p>
     </div>
   </div>
   <div class="IMbox">
-    <img src="images/pic (12).png" alt="画像" class="IM">
+    <img src="images/pic (12).png">
     <div class="INbox">
       <h2>周辺機器の知識</h2>
       <p>国家資格である情報配線施工技能士を取得し、ハンダを使った簡単な電子工作からパソコンの組立まで、幅広く電子機器の扱いができます。</p>
@@ -140,31 +135,25 @@
 
   <section id="l4"><!-- ギャラリーセクション -->
     <h1>GALLERY</h1>
-    <p>写真の紹介です。写真を撮るのが好きでインスタにも色々投稿しています。</p>
-    <div class="IMbox">
-      <img src="images/pic (14).png" alt="画像" class="gallery">
-      <img src="images/pic (15).png" alt="画像" class="gallery">
-      <img src="images/pic (16).png" alt="画像" class="gallery">
-      <img src="images/pic (17).png" alt="画像" class="gallery">
-    </div>
-    <div class="IMbox">
-      <img src="images/pic (18).png" alt="画像" class="gallery">
-      <img src="images/pic (19).png" alt="画像" class="gallery">
-      <img src="images/pic (20).png" alt="画像" class="gallery">
-      <img src="images/pic (21).png" alt="画像" class="gallery">
+      <p class="txtBOX">写真の紹介です。写真を撮るのが好きでインスタにも色々投稿しています。</p>
+    <div class="flexBOX2">
+      <img src="images/pic (14).png" alt="画像">
+      <img src="images/pic (15).png" alt="画像">
+      <img src="images/pic (16).png" alt="画像">
+      <img src="images/pic (17).png" alt="画像">
+      <img src="images/pic (18).png" alt="画像">
+      <img src="images/pic (19).png" alt="画像">
+      <img src="images/pic (20).png" alt="画像">
+      <img src="images/pic (21).png" alt="画像">
     </div>
   </section>
 
   <section id="l5"><!-- SNS -->
     <h1>CONTACT</h1>
-    <p>SNSもたまに投稿しています。Twitterでは興味のある技術関係の事など、<br>Instagramでは旅行やご飯の写真を投稿しています。よければフォローお願いします。</p>
+    <p class="txtBOX">SNSもたまに投稿しています。Twitterでは興味のある技術関係の事など、Instagramでは旅行やご飯の写真を投稿しています。よければフォローお願いします。</p>
     <div class="ICbox2">
-      <a href="https://twitter.com/KoukiMasuda8" target=”_blank”><img src="images/IC1.png" alt="画像"></a>
       <a href="https://www.instagram.com/kouki_03m/" target=”_blank”><img src="images/IC2.png" alt="画像" href="sample2.html"></a>
-    </div>
-    <div class="ICbox2S"><!-- スマホ用 -->
       <a href="https://twitter.com/KoukiMasuda8" target=”_blank”><img src="images/IC1.png" alt="画像"></a>
-      <a href="https://www.instagram.com/kouki_03m/" target=”_blank”><img src="images/IC2.png" alt="画像" href="sample2.html"></a>
     </div>
   </section>
 

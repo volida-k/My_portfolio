@@ -4,33 +4,17 @@
 html,body{
   margin: auto;
   padding: 0px;
-  padding-top: 0px;
   width: 100%;
 }
 .main{
-  position: relative;
-  z-index: 1;
+  position: relative; /*相対的な位置指定*/
+  z-index: 1; /*スタック順序１*/
   margin: 0;
 }
-h1{
-  color: #517D99;
-  font-size: 2vw;
-  display: block; /* ブロック要素に変更 */
-  text-align: center; /* 中央揃えに指定 */
-  width: 100%; /* 幅を指定 */
-}
-h2{
-  margin: 0px;
-  margin-bottom: 15px;
-  font-size: 1.3vw;
-  color: #454545;
-  font-family: 'Kosugi Maru', sans-serif;
-}
-p{
-  font-size: 1vw;
-  font-family: 'Kosugi Maru', sans-serif;
-  margin: 1.5%;
-  line-height: 150%;
+.txtBOX{
+  margin: 0;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 /*セクション毎背景*/
@@ -83,8 +67,7 @@ p{
   font-size: 30px;
   font-family: 'Staatliches', cursive;
 }
-/* ロードアニメーション */
-.loader,
+.loader,/* ロードアニメーション */
 .loader:before,
 .loader:after {
   background: #ffffff;
@@ -143,245 +126,19 @@ p{
     height: 5em;
   }
 }
-/* ロード終わり */
-.completed {
+.completed {/* ロード終わり */
   opacity: 0;
   visibility: hidden;
 }
 
-/*背景*/
-.video-back {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.video-back video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
-}
-
-/*ヘッダー*/
-header{/*変化前のヘッダーのサイズやアニメーションの設定*/
-  position: fixed;
-  top: 1.5vw; /*上の余白*/
-  background-color: #517D99;
-  transition: all 300ms 0s ease;
-  z-index: 1;
-  border-top-right-radius: 40px;/*右上丸*/
-  border-bottom-right-radius: 40px;/*右下丸*/
-}
-
-.small{/*変化後のヘッダーのサイズ*/
-  top: 0; /*上の余白*/
-  padding: 0px;
-  border-top-right-radius: 0px;/*右上丸*/
-  border-bottom-right-radius: 20px;/*右下丸*/
-}
-header,li{
-  padding: 0.8vw;
-  display: inline;
-}
-header,li,a{/*リンク*/
-text-decoration:none;
-font-size: 1.5vw;
-}
-a:link {
-color:white;
-}
-a:visited {
-color:#ffff;
-}
-a:hover {
-color:#000000;
-text-decoration:none; /*アンダーラインを消す*/
-}
-a:active {
-color:#white;
-}
-@media(max-width:750px){/*スマホでは非表示*/
-  header{
-    display: none !important;
-  }
-}
-
-/*タイトル文字*/
-.TOPtext{
-  margin: 0;
-  margin-top: 3%;
-  font-size: 20vw; /* ビューポートに合わせて変更 */
-  color: black;
-  letter-spacing: 1.5vw; /* 文字間隔 */
-  line-height: 100%; /* 行間 */
-  font-family: 'Staatliches', cursive;
-}
 
 
-/* ホビーセクション */
-.HobbyBOX{
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-}
-.IMlink{
-  display: flex; /*要素の並列化*/
-  padding-right: 0px;
-  padding-top: 0px;
-}
-.linkBOX{
-  position: relative;
-  background-color: black;
-}
-.linkBOX a{
-  width: 33%;
-  height: auto;
-}
-.IMlink a img{
-  width: 100%;
-  height: 100%;
-  opacity: 0.2; /*透明度*/
-}
-.IMlink a img:hover{ /*カーソル合わせた時*/
-  opacity: 0.5;
-}
-.linkBOX p{
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3vw; /* ビューポートに合わせて変更 */
-  letter-spacing: 1vw; /* 文字間隔 */
-  color: white;
-  font-family: 'Roboto', sans-serif;
-}
-
-
-/* スキルセクション */
-.IMbox{
-  display: flex; /*要素の並列化*/
-  justify-content: center; /* 中央揃え */
-  padding:1%;
-  padding-left: 0px;
-}
-.IM{
-  width: 30%;
-}
-.INbox{
-  display: flex;
-  flex-flow: column; /*要素の縦列化*/
-  padding: 2%;
-}
-.ICbox{
-  display: flex;
-  padding: 0px;
-}
-/*リンク*/
-.ICbox a{
-  padding: 0.8vw;
-  padding-left: 0px;
-  text-decoration:none; /*アンダーラインを消す*/
-}
-/*アイコン*/
-.ICbox i{
-  color: #517D99;
-  font-size: 2.5vw;
-}
-.ICbox i:hover{
-  color: #6AC1B7;
-  font-size: 2.5vw;
-}
-.ICbox img{
-  display: flex;
-  padding: 20px;
-  width: 1.8vw;
-  height: 1.8vw;
-}
-.ICbox img:hover{
-  width: 2.5vw;
-  height: 2.5vw;
-}
-@media(max-width:750px){/*スマホでは非表示*/
-  .ICbox{
-    display: none !important;
-  }
-}
-/*スマホ用*/
-.ICboxS{
-  display: flex;
-  padding: 0px;
-}
-.ICboxS img{
-  display: flex;
-  padding: 20px;
-  width: 4vw;
-  height: 4vw;
-}
-@media(min-width:750px){/*PCでは非表示*/
-  .ICboxS{
-    display: none !important;
-  }
-}
-
-/* コンタクト */
-.ICbox2{
-  display: flex;
-  justify-content: center; /* 中央揃え */
-}
-.ICbox2 img{
-  display: flex;
-  padding: 20px;
-  width: 1.8vw;
-  height: 1.8vw;
-}
-@media(max-width:750px){/*スマホでは非表示*/
-  .ICbox2{
-    display: none !important;
-  }
-}
-/*スマホ用*/
-.ICbox2S{
-  display: flex;
-  justify-content: center; /* 中央揃え */
-}
-.ICbox2S img{
-  display: flex;
-  padding: 20px;
-  width: 4vw;
-  height: 4vw;
-}
-@media(min-width:750px){/*PCでは非表示*/
-  .ICbox2S{
-    display: none !important;
-  }
-}
-
-
-/*ギャラリーページCSS*/
+/*ホビーページCSS*/
 .gallery {
   padding-right: 2%;
   width: 20%;
   height:11%;
 }
-
 .Pic-back {
   position: relative;
   background-color: black;
