@@ -4,8 +4,10 @@
   <title>趣味:旅行</title>
   <!-- ページの大きさ指定 -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- オリジナルCSSファイル -->
-  <link rel="stylesheet" href="CSSfiles/CSS2.0.css" type="text/css" media="all">
+  <!-- CSSファイル -->
+  <link rel="stylesheet" href="CSSfiles/CSS2.0.css">　<!-- 共通CSS-->
+  <link rel="stylesheet" href="CSSfiles/PC.css" media="screen and (min-width: 751px)">　<!-- PC用CSS-->
+  <link rel="stylesheet" href="CSSfiles/Mobile.css" media="screen and (max-width: 750px)" >  <!-- スマホ用CSS-->
   <!-- JSファイル -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>　<!--JQ-->
   <script src="https://unpkg.com/scrollreveal"></script>  <!-- ScrollReveal -->
@@ -31,15 +33,10 @@
 </head>
 
 <body>
-  <!-- ロード画面 -->
-  <div id="loading-wrapper">
-    <div class="loader"></div>
-    <p>Loading...</p>
-  </div>
 
   <!-- 本文 -->
   <div class="H_main">
-    <h1>HOBBY GALLERY</h1>
+    <h1>TRAVEL GALLERY</h1>
     <div class="image-grid-b"></div>
     <a class="btn" href="https://volida-k.github.io/My_portfolio/WEB.html"><</a>
   </div>
