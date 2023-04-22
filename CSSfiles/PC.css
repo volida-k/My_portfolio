@@ -23,6 +23,10 @@ p{
   line-height: 150%;
 }
 
+#l2 p{
+  display: none; /*表示しない*/
+}
+
 /*動画背景*/
 .video-back {
   position: fixed; /* 要素を固定位置に配置 */
@@ -91,11 +95,7 @@ text-decoration:none; /*アンダーラインを消す*/
 a:active {
 color:#white;
 }
-@media(max-width:750px){/*スマホでは非表示*/
-  header{
-    display: none !important;
-  }
-}
+
 
 /*タイトル文字*/
 .TOPtext{
