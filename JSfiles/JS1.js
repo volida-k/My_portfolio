@@ -36,7 +36,7 @@ function loadImages(path, num, gridClass) {
 // 画像の読み込みとグリッドへの表示を行う
 loadImages("picture/a/a", 22, ".image-grid-a");
 loadImages("picture/b/b", 22, ".image-grid-b");
-loadImages("picture/c/c", 13, ".image-grid-c");
+loadImages("picture/c/c", 15, ".image-grid-c");
 
 
 
