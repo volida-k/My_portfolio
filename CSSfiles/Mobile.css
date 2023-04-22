@@ -3,7 +3,7 @@
 /* PC文字スタイル */
 h1{
   color: #517D99;
-  font-size: 5vw;
+  font-size: 8vw;
   display: block; /* ブロック要素に変更 */
   text-align: center; /* 中央揃えに指定 */
   margin-top: 1.2vw;
@@ -11,14 +11,14 @@ h1{
 }
 h2{
   margin: 0px;
-  font-size: 2vw;
+  font-size: 5vw;
   color: #454545;
   font-family: 'Kosugi Maru', sans-serif;
 }
 p{
   margin-top: 0.7vw;
   margin-bottom: 0.7vw;
-  font-size: 1.5vw;
+  font-size: 3vw;
   font-family: 'Kosugi Maru', sans-serif;
   line-height: 150%;
 }
@@ -38,7 +38,7 @@ p{
   min-height: 100%;
   width: auto;
   height: auto;
-  max-width: 750px; /*最大幅を750pxに制限 */
+  max-width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
